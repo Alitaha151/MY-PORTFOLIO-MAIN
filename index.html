@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advanced portfolio built with HTML, CSS, and JavaScript." />
+  <title>Advanced Portfolio | Taha Ali Siddiqui</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">◆</span>
+        <span class="brand__text">Taha Ali Siddiqui</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#contact" class="nav__link nav__cta">Contact</a>
+      </nav>
+    </div>
+
+    <div class="header-effects" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+      <div class="orb orb--c"></div>
+      <canvas id="bgCanvas"></canvas>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker">
+            <span class="kicker__dot" aria-hidden="true"></span>
+            Available for freelance • Remote • 2026
+          </p>
+
+          <h1 class="hero__title" id="heroTitle">
+            Building <span class="grad-text">fast</span> & <span class="grad-text">beautiful</span> web experiences.
+          </h1>
+
+          <p class="hero__subtitle">
+            I’m a front-end developer focused on performance, design systems, and interactive UI.
+            This portfolio is built using only <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Let’s Talk</a>
+          </div>
+
+          <div class="hero__meta" role="list" aria-label="Highlights">
+            <div class="meta-card" role="listitem">
+              <div class="meta-card__icon" aria-hidden="true">⚡</div>
+              <div>
+                <div class="meta-card__label">Performance First</div>
+                <div class="meta-card__value">Lighthouse-minded</div>
+              </div>
+            </div>
+            <div class="meta-card" role="listitem">
+              <div class="meta-card__icon" aria-hidden="true">🧩</div>
+              <div>
+                <div class="meta-card__label">Design Systems</div>
+                <div class="meta-card__value">Reusable components</div>
+              </div>
+            </div>
+            <div class="meta-card" role="listitem">
+              <div class="meta-card__icon" aria-hidden="true">🛰️</div>
+              <div>
+                <div class="meta-card__label">Interactive UI</div>
+                <div class="meta-card__value">Motion + UX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-label="Profile panel">
+          <div class="profile">
+            <div class="profile__top">
+              <div class="profile__avatar" aria-hidden="true">
+                <div class="avatar-ring"></div>
+                <div class="avatar-face">Y</div>
+              </div>
+
+              <div class="profile__identity">
+                <div class="profile__name">Taha Ali Siddiqui</div>
+                <div class="profile__role">Front-End Developer</div>
+                <div class="profile__location">Based in Your City • UTC+X</div>
+              </div>
+            </div>
+
+            <div class="profile__stats" role="list" aria-label="Quick stats">
+              <div class="stat" role="listitem">
+                <div class="stat__num" data-count="12">0</div>
+                <div class="stat__label">Projects</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__num" data-count="4">0</div>
+                <div class="stat__label">Years</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__num" data-count="98">0</div>
+                <div class="stat__label">UI Quality</div>
+              </div>
+            </div>
+
+            <div class="profile__links">
+              <a class="pill" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="pill" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="pill" href="#" target="_blank" rel="noreferrer">Resume</a>
+            </div>
+
+            <div class="profile__note">
+              Tip: replace the placeholder name, links, and project data inside <code>app.js</code>.
+            </div>
+          </div>
+
+          <div class="panel-mini" aria-label="Now playing">
+            <div class="panel-mini__label">Now building</div>
+            <div class="panel-mini__title">Interactive dashboards</div>
+            <div class="panel-mini__bar" aria-hidden="true">
+              <span style="width: 72%"></span>
+            </div>
+            <div class="panel-mini__hint">Smooth UX • Accessibility • Speed</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="aboutTitle">About</h2>
+          <p class="section-subtitle">A compact story focused on what matters for product & engineering teams.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card card--glass">
+            <h3 class="card__title">What I do</h3>
+            <ul class="list">
+              <li>Design and implement responsive, accessible interfaces.</li>
+              <li>Build reusable UI patterns and component libraries.</li>
+              <li>Optimize performance: rendering, loading, and interaction latency.</li>
+            </ul>
+          </div>
+          <div class="card card--glass">
+            <h3 class="card__title">How I work</h3>
+            <div class="timeline" role="list">
+              <div class="step" role="listitem">
+                <div class="step__num">01</div>
+                <div class="step__body">
+                  <div class="step__title">Discover</div>
+                  <div class="step__desc">User goals, constraints, and UX priorities.</div>
+                </div>
+              </div>
+              <div class="step" role="listitem">
+                <div class="step__num">02</div>
+                <div class="step__body">
+                  <div class="step__title">Design</div>
+                  <div class="step__desc">System-first UI with scalable layout decisions.</div>
+                </div>
+              </div>
+              <div class="step" role="listitem">
+                <div class="step__num">03</div>
+                <div class="step__body">
+                  <div class="step__title">Develop</div>
+                  <div class="step__desc">Clean JS interactions, semantic HTML, maintainable CSS.</div>
+                </div>
+              </div>
+              <div class="step" role="listitem">
+                <div class="step__num">04</div>
+                <div class="step__body">
+                  <div class="step__title">Polish</div>
+                  <div class="step__desc">Accessibility checks, motion tuning, performance pass.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <div class="cta-row__text">
+            Want a portfolio like this for your work?
+            <span class="muted">I can tailor it to your projects and style.</span>
+          </div>
+          <a class="btn btn--primary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-head section-head--wide">
+          <h2 class="section-title" id="projectsTitle">Projects</h2>
+          <p class="section-subtitle">A few polished builds with interactive elements and solid UX.</p>
+        </div>
+
+        <div class="toolbar" aria-label="Project filters">
+          <div class="segmented" role="tablist" aria-label="Filter projects">
+            <button class="segmented__btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="segmented__btn" type="button" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
+            <button class="segmented__btn" type="button" data-filter="ui" role="tab" aria-selected="false">UI/UX</button>
+            <button class="segmented__btn" type="button" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+          </div>
+
+          <div class="toolbar__search">
+            <label class="sr-only" for="projectSearch">Search projects</label>
+            <input id="projectSearch" class="input" type="search" placeholder="Search (e.g. dashboard)..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="grid" id="projectsGrid" aria-live="polite"></div>
+
+        <div class="empty" id="projectsEmpty" hidden>
+          No projects match your filters.
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="skillsTitle">Skills</h2>
+          <p class="section-subtitle">A mix of engineering fundamentals and UI craftsmanship.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skills__left">
+            <div class="card card--glass">
+              <h3 class="card__title">Core strengths</h3>
+              <ul class="list list--tight">
+                <li>Semantic, accessible HTML structure</li>
+                <li>Scalable CSS: tokens, layouts, components</li>
+                <li>JavaScript UI logic: state, events, animations</li>
+                <li>Performance: rendering and perceived speed</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills__right">
+            <div class="skill-bars" role="list" aria-label="Skill proficiency">
+              <div class="skill" role="listitem">
+                <div class="skill__head">
+                  <span>UI Engineering</span>
+                  <span class="skill__pct">92%</span>
+                </div>
+                <div class="skill__bar"><span style="width: 92%"></span></div>
+              </div>
+              <div class="skill" role="listitem">
+                <div class="skill__head">
+                  <span>Accessibility</span>
+                  <span class="skill__pct">88%</span>
+                </div>
+                <div class="skill__bar"><span style="width: 88%"></span></div>
+              </div>
+              <div class="skill" role="listitem">
+                <div class="skill__head">
+                  <span>Interaction Design</span>
+                  <span class="skill__pct">86%</span>
+                </div>
+                <div class="skill__bar"><span style="width: 86%"></span></div>
+              </div>
+              <div class="skill" role="listitem">
+                <div class="skill__head">
+                  <span>Performance</span>
+                  <span class="skill__pct">84%</span>
+                </div>
+                <div class="skill__bar"><span style="width: 84%"></span></div>
+              </div>
+            </div>
+
+            <div class="card card--glass">
+              <h3 class="card__title">Toolbox</h3>
+              <div class="chip-row">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JAVASCRIPT</span>
+                <span class="chip">PHP</span>
+                <span class="chip">MY SQL</span>
+                <span class="chip">LARAVEL</span>
+                <span class="chip">.NET</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section-head section-head--wide">
+          <h2 class="section-title" id="contactTitle">Contact</h2>
+          <p class="section-subtitle">Send a message.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm" autocomplete="on">
+            <div class="form-row">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="input" name="name" type="text" placeholder="Your name" required minlength="2" />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="input" name="email" type="email" placeholder="you@domain.com" required />
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea class="input input--textarea" name="message" rows="5" placeholder="Tell me about your project..." required minlength="10"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <button class="btn btn--ghost" type="button" id="clearBtn">Clear</button>
+            </div>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-side" aria-label="Contact details">
+            <div class="card card--glass">
+              <h3 class="card__title">Direct</h3>
+              <div class="contact-list">
+<div class="contact-item"><span class="contact-item__k">Email</span><a class="contact-item__v" href="mailto:staha0034@gmail.com">staha0034@gmail.com</a></div>
+                <div class="contact-item"><span class="contact-item__k">Location</span><span class="contact-item__v">Karachi, Pakistan</span></div>
+                <div class="contact-item"><span class="contact-item__k">Response</span><span class="contact-item__v">Within 24–48 hours</span></div>
+              </div>
+            </div>
+
+            <div class="card card--glass">
+              <h3 class="card__title">Quick links</h3>
+              <div class="quick-links">
+                <a class="pill" href="#">Resume</a>
+                <a class="pill" href="#">GitHub</a>
+                <a class="pill" href="#">LinkedIn</a>
+              </div>
+            </div>
+
+            <div class="card card--glass">
+              <h3 class="card__title">Micro-FAQ</h3>
+              <details class="faq" open>
+                <summary>Do you work with design files?</summary>
+                <p>Yes—Figma-to-implementation is part of the flow. I translate design intent into accessible, maintainable UI.</p>
+              </details>
+              <details class="faq">
+                <summary>Can you optimize existing UIs?</summary>
+                <p>Yes. I usually start with a performance + UX audit, then propose targeted improvements.</p>
+              </details>
+              <details class="faq">
+                <summary>What tech are you comfortable with?</summary>
+                <p>HTML/CSS/JS with strong accessibility and performance fundamentals.</p>
+              </details>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__left">
+          <div class="footer__brand">Taha Ali Siddiqui</div>
+          <div class="footer__copy">&copy; 2026  Taha Ali Siddiqui. All rights reserved.</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <div class="toast__icon" aria-hidden="true">✓</div>
+      <div class="toast__msg" id="toastMsg">Saved</div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
